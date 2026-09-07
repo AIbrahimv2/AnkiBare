@@ -1,15 +1,30 @@
 # AnkiBare
-A minimalist macOS add-on that removes the window title bar from Anki.
 
-⚠️ Note on Window Movement
+A minimalist macOS add-on that hides Anki's window title bar for a clean, bare look.
 
-This add-on removes the title bar, which acts as the primary "handle" for clicking and dragging windows in macOS.
+The title bar is made transparent and its space is reclaimed by the content, and
+the traffic-light buttons (close / minimize / zoom) are removed. The window stays
+*titled* underneath, so macOS keeps its **rounded corners** and native shadow — it
+just looks headerless.
 
-- The Dragging Limitation: Once the title bar is hidden, you will no longer be able to click and drag the window to reposition it.
+## Behavior
 
-- Resizing is preserved: You can still resize the window by clicking and dragging the edges or corners, but repositioning the window becomes significantly more cumbersome without the title bar.
+- **No visible title bar or window buttons** — the header space is given back to
+  Anki's content.
+- **Rounded corners preserved** — because the window remains titled, macOS keeps
+  rounding it (a fully borderless window would be square).
+- **Dragging still works** — the (now invisible) title-bar strip along the top is
+  still a drag handle, so you can reposition the window normally.
+- **Resizing still works** — from the window edges and corners, as usual.
+- Close / minimize with the usual shortcuts (⌘W, ⌘M) or the menu bar, since the
+  buttons are gone.
 
-- **Recommended Workflow: This add-on is intended for users who utilize a Tiling Window Manager (I use AeroSpace) to handle window placement automatically.**
+Great on its own, and pairs cleanly with translucent-window add-ons (e.g.
+AnkiGlass) since the rounded shape is kept.
+
+## Requirements
+
+macOS only. On Windows and Linux the add-on loads and does nothing.
 
 ## Before:
 

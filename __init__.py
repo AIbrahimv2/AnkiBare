@@ -16,28 +16,15 @@ def hide_title_bar():
     send = ctypes.CFUNCTYPE(ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p)(
         ("objc_msgSend", lib)
     )
-
     send_bool = ctypes.CFUNCTYPE(
-        ctypes.c_void_p,
-        ctypes.c_void_p,
-        ctypes.c_void_p,
-        ctypes.c_bool,
+        ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_bool
     )(("objc_msgSend", lib))
-
     send_ulong = ctypes.CFUNCTYPE(
-        ctypes.c_void_p,
-        ctypes.c_void_p,
-        ctypes.c_void_p,
-        ctypes.c_ulong,
+        ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ulong
     )(("objc_msgSend", lib))
-
-    send_double = ctypes.CFUNCTYPE(
-        ctypes.c_void_p,
-        ctypes.c_void_p,
-        ctypes.c_void_p,
-        ctypes.c_double,
+    send_long = ctypes.CFUNCTYPE(
+        ctypes.c_void_p, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_long
     )(("objc_msgSend", lib))
-
     get_ulong = ctypes.CFUNCTYPE(ctypes.c_ulong, ctypes.c_void_p, ctypes.c_void_p)(
         ("objc_msgSend", lib)
     )
@@ -50,30 +37,34 @@ def hide_title_bar():
     if not window:
         return
 
-    # Style mask constants
-    NSTitledWindowMask = 1 << 0
-    NSClosableWindowMask = 1 << 1
-    NSMiniaturizableWindowMask = 1 << 2
-    NSResizableWindowMask = 1 << 3
+    NSWindowStyleMaskTitled = 1 << 0
+    NSWindowStyleMaskFullSizeContentView = 1 << 15
+    NSWindowTitleHidden = 1  # NSWindowTitleVisibility
 
-    # Remove NSTitledWindowMask, keep the rest
+    # Keep the window TITLED so macOS keeps rounding its corners, but let the
+    # content fill the title bar's area to reclaim the header space. (Dropping
+    # the titled style makes the window borderless and square -- which is what
+    # left sharp corners, especially alongside translucent-window add-ons.)
     current_mask = get_ulong(window, sel(b"styleMask"))
-    new_mask = (
-        (current_mask & ~NSTitledWindowMask)
-        | NSResizableWindowMask
-        | NSClosableWindowMask
-        | NSMiniaturizableWindowMask
+    send_ulong(
+        window,
+        sel(b"setStyleMask:"),
+        current_mask | NSWindowStyleMaskTitled | NSWindowStyleMaskFullSizeContentView,
     )
-    send_ulong(window, sel(b"setStyleMask:"), new_mask)
 
-    # Round corners via the content view's layer
-    content_view = send(window, sel(b"contentView"))
-    send_bool(content_view, sel(b"setWantsLayer:"), True)
-    layer = send(content_view, sel(b"layer"))
-    send_double(layer, sel(b"setCornerRadius:"), 10.0)
-    send_bool(layer, sel(b"setMasksToBounds:"), True)
+    # Make the title bar invisible.
+    send_bool(window, sel(b"setTitlebarAppearsTransparent:"), True)
+    send_long(window, sel(b"setTitleVisibility:"), NSWindowTitleHidden)
 
-    # Keep the window shadow so it looks native
+    # Remove the traffic-light buttons (0=close, 1=miniaturize, 2=zoom) from the
+    # view hierarchy. Qt re-manages their `hidden` flag, so setHidden: gets
+    # reverted; removing them from their superview does not.
+    for i in (0, 1, 2):
+        btn = send_long(window, sel(b"standardWindowButton:"), i)
+        if btn:
+            send(btn, sel(b"removeFromSuperview"))
+
+    # Keep the native window shadow so it still looks like a real window.
     send_bool(window, sel(b"setHasShadow:"), True)
 
 
