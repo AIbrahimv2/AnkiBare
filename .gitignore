@@ -1,6 +1,7 @@
-.DS_Store
-
 __pycache__/
 *.pyc
+meta.json
+src/user_files/
 dist/
 *.ankiaddon
+.DS_Store
