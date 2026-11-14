@@ -111,3 +111,20 @@ def on_init():
 
 
 gui_hooks.main_window_did_init.append(on_init)
+
+
+def _register_kit() -> None:
+    """The shared add-on kit (src/kit/): What's new and About on Anki's
+    Config button for the add-on, and the notice after updates."""
+    try:
+        from . import kit
+
+        kit.register("bare")
+        mw.addonManager.setConfigAction(__name__, lambda: kit.open_page(tab="news"))
+    except Exception:
+        import traceback
+
+        traceback.print_exc()
+
+
+_register_kit()

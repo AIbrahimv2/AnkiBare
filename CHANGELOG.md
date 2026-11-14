@@ -5,6 +5,14 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+### Added
+
+- The Config button in Tools → Add-ons opens What's new (this list of changes)
+  and About (links, whether AnkiWeb has an update, and AIbrahimv2's other Anki
+  add-ons, with an Install button).
+- When any of AIbrahimv2's add-ons is updated, a card at the bottom of Anki's
+  main window says so once, with a link to what's new.
+
 ## [1.0.0] - 2026-09-10
 
 ### Added
