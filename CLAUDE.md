@@ -18,6 +18,8 @@ listing and AnkiWeb search.
 This repo: `./build.sh` builds `dist/anki-bare.ankiaddon` from `src/`. On the
 user's Mac, `src/` is symlinked into Anki's `addons21` folder as `anki-bare`,
 and the AnkiWeb copy (`1505882046`) is turned off so only one runs.
+The AnkiWeb listing (title, tags, versions, description) is in
+`docs/ankiweb-listing.md`. Keep it matching what's live.
 
 Anki's Config button for it opens the shared kit's window (What's new and
 About). `src/kit/` is a copy of `../anki-addon-kit` (the
