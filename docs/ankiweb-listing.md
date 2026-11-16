@@ -10,7 +10,44 @@ skill has the steps), and update this file in the same session.
 
 ## Tags
 
-remove top bar title minimal clean modern bare
+hide title bar remove title bar titlebar hide traffic light buttons window buttons minimal minimalist clean modern bare ui borderless macos mac rounded corners tiling window manager yabai
+
+## Search
+
+Searched on 2026-11-15, before and after the tags above replaced the old
+ones, with the `ankiweb_search.py` approach from the `anki-addon-release`
+skill. "Results" is how many add-ons match now. AnkiWeb sorts results by
+ratings, so an add-on without ratings comes after every rated match; the
+words only decide whether it shows up.
+
+- Tags match whole words. "study plan" didn't find the tag "study planner",
+  while the title and description match parts of words ("mac" finds
+  "macOS"). So the tags spell out the exact words people type.
+- Neighbouring tags read as a phrase, so their order matters.
+- Left out on purpose: "top bar", which was in the old tags: Anki's top bar
+  is the Decks/Add/Browse toolbar, which AnkiBare doesn't hide. Also "zen",
+  "distraction free", "full screen" and "header", which are other add-ons'
+  jobs.
+
+| Search | Results | Before | After |
+| --- | --- | --- | --- |
+| title bar | 10 | #6 | #6 |
+| titlebar | 5 | absent | #5 |
+| hide title bar | 2 | absent | #2 |
+| remove title bar | 1 | absent | #1 |
+| traffic light | 2 | absent | #1 |
+| window buttons | 3 | not run | #3 |
+| borderless | 3 | absent | #3 |
+| rounded corners | 8 | absent | #4 |
+| minimal | 115 | #68 | #62 |
+| minimalist | 39 | #21 | #17 |
+| clean | 361 | #180 | #179 |
+| modern | 168 | #81 | #75 |
+| macos | 371 | #142 | #168 |
+| tiling | 26 | #17 | #17 |
+| window manager | 4 | #2 | #2 |
+| aerospace | 1 | #1 | #1 |
+| yabai | 1 | not run | #1 |
 
 ## Support page
 
