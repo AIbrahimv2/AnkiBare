@@ -55,7 +55,24 @@ https://github.com/AIbrahimv2/AnkiBare
 
 ## Supported Anki versions
 
-2.1.1 to 2.1.1 with no `-`, the form's default, so every version gets it.
+Minimum 24.04, maximum 26.09.4 with no `-`, so newer versions get it too. The
+form turns 24.04 into "24.04.0", and the listing shows "24.04-26.09.4+".
+
+Set with 1.1.0 on 2026-11-17. Until then it was 2.1.1 to 2.1.1, the form's
+default, so every version got it; anyone on an older Anki keeps 1.0.0.
+
+Why 24.04:
+
+- 1.1.0 adds the shared kit's What's new and About window (src/kit/), a web
+  page whose stylesheet uses `color-mix()`, which needs Chromium 111. 24.04
+  is the first release whose builds all ship Qt 6.6 (Chromium 112), and it's
+  the minimum of AIbrahimv2's other add-ons.
+- AnkiBare's own code (the title bar, through AppKit with ctypes) isn't tied
+  to an Anki version.
+
+Not tested on 24.04 itself: the code compiles on its Python 3.9, and the kit
+passes Stepwise's and Exam Timeline's tests there (`tests/run_on_anki.sh 24.4`
+in those repos).
 
 ## Description
 
