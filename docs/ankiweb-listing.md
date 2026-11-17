@@ -81,12 +81,17 @@ in those repos).
 
 ## Description
 
-Paste as is. AnkiWeb takes Markdown and basic HTML. Until 2026-11-16 it
-described the March version, whose window couldn't be dragged; 1.0.0 keeps
-an invisible title bar strip that still drags it.
+Paste as is. AnkiWeb takes Markdown and basic HTML. It follows the layout in
+the `anki-addon-release` skill's listing conventions: what it does, the code
+line and the screenshot first, the signature last.
+
+Until 2026-11-16 it described the March version, whose window couldn't be
+dragged; 1.0.0 keeps an invisible title bar strip that still drags it.
 
 ```markdown
 Hide Anki's title bar on your Mac for a clean, bare window. The title bar and its close, minimize and zoom buttons disappear, and their space goes to Anki's content.
+
+**Code: 1505882046.** Paste it in Anki under **Tools → Add-ons → Get Add-ons**. Needs Anki 24.04 or newer, on a Mac.
 
 **Before**
 
@@ -95,6 +100,8 @@ Hide Anki's title bar on your Mac for a clean, bare window. The title bar and it
 **After**
 
 <p><img src="https://github.com/user-attachments/assets/a2b75ee7-d4fc-4acb-8429-2a8f70220719" alt="The same window with AnkiBare: no title bar" width="100%"></p>
+
+**Features**
 
 - The window keeps its rounded corners and shadow.
 - Drag it by its top edge as before: the strip is still there, just invisible. Resize it from any edge or corner.
@@ -108,4 +115,6 @@ Hide Anki's title bar on your Mac for a clean, bare window. The title bar and it
 - Handy with a tiling window manager such as AeroSpace, which places the window for you.
 
 Source, changelog and issues: [github.com/AIbrahimv2/AnkiBare](https://github.com/AIbrahimv2/AnkiBare)
+
+<p><img src="https://raw.githubusercontent.com/AIbrahimv2/AnkiAddonKit/main/assets/signature.png" alt="AIbrahimv2" width="180"></p>
 ```
