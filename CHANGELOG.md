@@ -3,7 +3,7 @@
 All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## [Unreleased]
+## [1.1.0] - 2026-11-17
 
 ### Added
 
@@ -12,6 +12,10 @@ All notable changes to this project are documented here. The format is based on
   add-ons, with an Install button).
 - When any of AIbrahimv2's add-ons is updated, a card at the bottom of Anki's
   main window says so once, with a link to what's new.
+
+### Changed
+
+- Needs Anki 24.04 or newer, like AIbrahimv2's other add-ons.
 
 ## [1.0.0] - 2026-09-10
 
