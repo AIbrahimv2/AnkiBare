@@ -9,6 +9,11 @@ All notable changes to this project are documented here. The format is based on
 
 - **A wider What's new and About window**: each version's changes sit beside
   its number, and the other add-ons are laid out as cards.
+- **The signature at the end of About signs itself**, stroke by stroke, as
+  if written by hand when you scroll to it.
+- Add-on emoji stand on their own now, without a box around them.
+- About ends with links to AIbrahimv2's LinkedIn and Instagram, under the
+  signature.
 
 ## [1.1.0] - 2026-11-17
 
