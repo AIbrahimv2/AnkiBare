@@ -4,6 +4,11 @@ What's live at https://ankiweb.net/shared/info/1505882046. Edit it at
 https://ankiweb.net/shared/upload?id=1505882046 (the `anki-addon-release`
 skill has the steps), and update this file in the same session.
 
+## Package on AnkiWeb
+
+Version 1.1.0, uploaded 2026-11-17. The release script (`release.py --uploaded`
+in the `anki-addon-release` skill) updates this line after each upload.
+
 ## Title
 
 🐻 AnkiBare: remove Anki's macOS title bar for a clean, bare window
