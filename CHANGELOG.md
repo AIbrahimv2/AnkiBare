@@ -5,6 +5,12 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+### Added
+
+- **Liquid Glass with AnkiGlass.** On a Mac with AnkiGlass installed, the
+  What's new and About window gets the same glass as Anki's main window.
+  **Glass on add-on windows** in AnkiGlass's Settings turns it off.
+
 ### Changed
 
 - **A wider What's new and About window**: each version's changes sit beside
@@ -13,7 +19,10 @@ All notable changes to this project are documented here. The format is based on
   if written by hand when you scroll to it.
 - Add-on emoji stand on their own now, without a box around them.
 - About ends with links to AIbrahimv2's LinkedIn and Instagram, under the
-  signature.
+  signature, and the signature opens AIbrahimv2's website.
+- On a Mac, with Stepwise's, Skim's or AnkiGlass's window in front, ⌘,
+  opens that add-on's settings instead of Anki's Preferences. Everywhere
+  else it still opens Anki's.
 
 ## [1.1.0] - 2026-11-17
 
