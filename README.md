@@ -28,8 +28,17 @@ macOS only. On Windows and Linux the add-on loads and does nothing.
 
 ## Before:
 
-<img width="1800" height="1169" alt="image" src="https://github.com/user-attachments/assets/0d7ffa9a-0e8c-41f2-ae5a-b7e1c87a35ce" />
+<img src="docs/before.png" width="100%" alt="Anki's window with its title bar">
 
 ## After:
 
-<img width="1800" height="1169" alt="image" src="https://github.com/user-attachments/assets/a2b75ee7-d4fc-4acb-8429-2a8f70220719" />
+<img src="docs/after.png" width="100%" alt="The same window with AnkiBare: no title bar">
+
+<sub>Shown with [AnkiGlass](https://github.com/AIbrahimv2/AnkiGlass), which gives Anki's main window macOS Liquid Glass.</sub>
+
+## Development
+
+`python3 tools/screenshots.py` renders `docs/before.png` and `docs/after.png`
+(used here and on AnkiWeb) with the add-ons' shared screenshot tools in the
+kit (`../anki-addon-kit/screenshots`): Anki's own pages in AnkiGlass, on macOS
+Tahoe's dark wallpaper.
