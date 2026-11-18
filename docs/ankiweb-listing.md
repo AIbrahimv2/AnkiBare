@@ -95,11 +95,13 @@ Hide Anki's title bar on your Mac for a clean, bare window. The title bar and it
 
 **Before**
 
-<p><img src="https://github.com/user-attachments/assets/0d7ffa9a-0e8c-41f2-ae5a-b7e1c87a35ce" alt="Anki's window with its title bar" width="100%"></p>
+<p><img src="https://raw.githubusercontent.com/AIbrahimv2/AnkiBare/main/docs/before.png" alt="Anki's window with its title bar" width="100%"></p>
 
 **After**
 
-<p><img src="https://github.com/user-attachments/assets/a2b75ee7-d4fc-4acb-8429-2a8f70220719" alt="The same window with AnkiBare: no title bar" width="100%"></p>
+<p><img src="https://raw.githubusercontent.com/AIbrahimv2/AnkiBare/main/docs/after.png" alt="The same window with AnkiBare: no title bar" width="100%"></p>
+
+<p><small>Shown with <a href="https://ankiweb.net/shared/info/1866406123">AnkiGlass</a>, which gives Anki's main window macOS Liquid Glass.</small></p>
 
 **Features**
 
