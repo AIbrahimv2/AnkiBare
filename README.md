@@ -26,19 +26,13 @@ AnkiGlass) since the rounded shape is kept.
 
 macOS only. On Windows and Linux the add-on loads and does nothing.
 
-## Before:
-
-<img src="docs/before.png" width="100%" alt="Anki's window with its title bar">
-
-## After:
-
-<img src="docs/after.png" width="100%" alt="The same window with AnkiBare: no title bar">
+<img src="docs/screenshot.png" width="100%" alt="Before and after: Anki's window with its title bar, and the same window with AnkiBare, without it">
 
 <sub>Shown with [AnkiGlass](https://github.com/AIbrahimv2/AnkiGlass), which gives Anki's main window macOS Liquid Glass.</sub>
 
 ## Development
 
-`python3 tools/screenshots.py` renders `docs/before.png` and `docs/after.png`
-(used here and on AnkiWeb) with the add-ons' shared screenshot tools in the
-kit (`../anki-addon-kit/screenshots`): Anki's own pages in AnkiGlass, on macOS
-Tahoe's dark wallpaper.
+`python3 tools/screenshots.py` renders `docs/screenshot.png`, the window
+before and after side by side (used here and on AnkiWeb), with the add-ons'
+shared screenshot tools in the kit (`../anki-addon-kit/screenshots`): Anki's
+own pages in AnkiGlass, on macOS Tahoe's dark wallpaper.
