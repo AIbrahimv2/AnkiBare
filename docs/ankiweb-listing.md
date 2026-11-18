@@ -91,7 +91,9 @@ dragged; 1.0.0 keeps an invisible title bar strip that still drags it.
 ```markdown
 Hide Anki's title bar on your Mac for a clean, bare window. The title bar and its close, minimize and zoom buttons disappear, and their space goes to Anki's content.
 
-**Code: 1505882046.** Paste it in Anki under **Tools → Add-ons → Get Add-ons**. Needs Anki 24.04 or newer, on a Mac.
+**macOS only.** On Windows and Linux it does nothing.
+
+**Code: 1505882046.** Paste it in Anki under **Tools → Add-ons → Get Add-ons**.
 
 <p><img src="https://raw.githubusercontent.com/AIbrahimv2/AnkiBare/main/docs/screenshot.png" alt="Before and after: Anki's window with its title bar, and the same window with AnkiBare, without it" width="100%"></p>
 
@@ -107,7 +109,6 @@ Hide Anki's title bar on your Mac for a clean, bare window. The title bar and it
 
 **Good to know**
 
-- Mac only. On Windows and Linux it does nothing.
 - Handy with a tiling window manager such as AeroSpace, which places the window for you.
 
 Source, changelog and issues: [github.com/AIbrahimv2/AnkiBare](https://github.com/AIbrahimv2/AnkiBare)
