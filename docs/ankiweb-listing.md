@@ -113,5 +113,5 @@ Hide Anki's title bar on your Mac for a clean, bare window. The title bar and it
 
 Source, changelog and issues: [github.com/AIbrahimv2/AnkiBare](https://github.com/AIbrahimv2/AnkiBare)
 
-<p><a href="https://abdelrahmanibrahim.com/anki/"><img src="https://raw.githubusercontent.com/AIbrahimv2/AnkiAddonKit/main/assets/signature.png" alt="AIbrahimv2's Anki add-ons" width="180"></a></p>
+<p><a href="https://abdelrahmanibrahim.com/anki/"><img src="https://raw.githubusercontent.com/AIbrahimv2/AnkiAddonKit/main/assets/signature.png" alt="AIbrahimv2's Anki add-ons" width="260"></a></p>
 ```
